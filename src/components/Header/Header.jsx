@@ -13,7 +13,7 @@ function Header() {
                 <div className="header__title">
                     <h1 style={{ color:"var(--white-color)"}}>Только самые <span style={{color: "var(--orange-color)"}}>сочные бургеры!</span></h1>
                     <div className="header__subtitle">
-                        <p style={{ color:"var(--white-color)", marginTop:"6rem"}}>Бесплатная доставка от 599₽</p>
+                        <p style={{ color:"var(--white-color)"}}>Бесплатная доставка от 599₽</p>
                      </div>
                 </div>
                 </div>

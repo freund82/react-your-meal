@@ -24,8 +24,34 @@ header{
     font-size:2.5rem;
     line-height: 1.2;
 }
+
+.header__subtitle{
+    margin-top:6rem;
+}
 .header__burgerImg{
     display:block;
     width:32.6rem;
     height:32.6rem;
+}
+
+@media(max-width: 414px) {
+    .header__inner{
+        flex-direction: column-reverse;
+    }
+    .header__title{
+        width:30rem;
+        font-size:1.75rem;
+        margin:0 auto;
+        text-align: center;
+        margin-top:1%;
+    }
+    .header__subtitle{
+        margin-top:1.5rem;
+        font-size:1.5rem;
+    }
+    .header__burgerImg{
+        width:22.7rem;
+        height:22.9rem;
+        margin: 0 auto;
+    }
 }
