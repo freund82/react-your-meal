@@ -1,0 +1,30 @@
+:root{
+    --orange-color:#FF5C00;
+    --black-color:#000000;
+    --white-color:#FFFFFF;
+    --gray-color:#F2F2F3;
+    --light-gray-color:#F9F9F9;
+    --yellow-color:#FFAB08;
+    ;
+}
+
+html{
+    font-size: 62.5%;
+}
+body{
+    width:100%;
+    max-width:144.0rem;
+    margin: 0 auto;
+    font-family: "Nunito", sans-serif;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+h1,h2,h3,h4,h5,h6{
+    margin:0;
+}
+
