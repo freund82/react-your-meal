@@ -5,17 +5,16 @@
     --gray-color:#F2F2F3;
     --light-gray-color:#F9F9F9;
     --yellow-color:#FFAB08;
-    ;
+    font-size:10px;
 }
 
-html{
-    font-size: 62.5%;
-}
+
 body{
     width:100%;
     max-width:144.0rem;
     margin: 0 auto;
     font-family: "Nunito", sans-serif;
+    background-color: var(--light-gray-color);
 }
 
 *,
