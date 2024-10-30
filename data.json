@@ -1,0 +1,111 @@
+[
+    {
+      "id": 1,
+      "type": "Бургеры",
+      "name": "Вечная классика",
+      "description": "Классический бургер",
+      "image": "/images/burgers/alltimeClassic.png",
+      "price": 450,
+      "weight": 450
+    },
+    {
+      "id": 2,
+      "type": "Бургеры",
+      "name": "Тяжелый удар",
+      "description": "Сытный бургер",
+      "image": "/images/burgers/heavy.png",
+      "price": 480,
+      "weight": 470
+    },
+    {
+      "id": 3,
+      "type": "Бургеры",
+      "name": "Мясная бомба",
+      "description": "Мясной бургер",
+      "image": "/images/burgers/meatBomb.png",
+      "price": 689,
+      "weight": 520
+    },
+    {
+      "id": 4,
+      "type": "Бургеры",
+      "name": "Супер сырный",
+      "description": "Очень сырный бургер",
+      "image": "/images/burgers/superCheese.png",
+      "price": 550,
+      "weight": 512
+    },
+    {
+      "id": 5,
+      "type": "Бургеры",
+      "name": "Сытный",
+      "description": "Сытный бургер",
+      "image": "/images/burgers/tastyBurger.png",
+      "price": 639,
+      "weight": 580
+    },
+    {
+      "id": 6,
+      "type": "Бургеры",
+      "name": "Итальянский",
+      "description": "Настоящий итальянский бургер",
+      "image": "/images/burgers/tastyBurger.png",
+      "price": 560,
+      "weight": 510
+    },
+    {
+      "id": 7,
+      "type": "Закуски",
+      "name": "Луковые кольца",
+      "description": "Ароматные луковые кольца",
+      "image": "/images/startes/onion.png",
+      "price": 230,
+      "weight": 160
+    },
+    {
+      "id": 8,
+      "type": "Закуски",
+      "name": "Начос",
+      "description": "Начос по мексикански",
+      "image": "/images/startes/nachos.png",
+      "price": 250,
+      "weight": 220
+    },
+    {
+      "id": 9,
+      "type": "Закуски",
+      "name": "Картошка фри",
+      "description": "Фкусный картофель",
+      "image": "/images/startes/free.png",
+      "price": 245,
+      "weight": 180
+    },
+    {
+      "id": 10,
+      "type": "Хот-доги",
+      "name": "Домашний хот-дог",
+      "description": "Хот-дог по домашнему",
+      "image": "/images/hotdogs/homeHotdog.png",
+      "price": 290,
+      "weight": 250
+    },
+    {
+      "id": 11,
+      "type": "Хот-доги",
+      "name": "Жгучий хот-дог",
+      "description": "Очень острый хот-дог",
+      "image": "/images/hotdogs/spicyHotdog.png",
+      "price": 239,
+      "weight": 245
+    },
+    {
+      "id": 12,
+      "type": "Хот-доги",
+      "name": "Классический хот-дог",
+      "description": "Хот-дог Классика",
+      "image": "/images/hotdogs/classicHotdog.png",
+      "price": 220,
+      "weight": 215
+    }
+  ]
+  

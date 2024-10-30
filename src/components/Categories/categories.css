@@ -33,4 +33,5 @@
 
 .active{
     background-color:var(--yellow-color);
+    transition:0.5s;
 }
