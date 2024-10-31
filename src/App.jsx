@@ -47,7 +47,7 @@ useEffect(() => {
         <div className="cart__block">
           <Cart/>
         </div>
-        <div>
+        <div className="main__block">
           {categories.map((categorieType) => (<Main key={categorieType.id} categorieType={categorieType.type} data={data}/>))}
         </div>
     </section>

@@ -35,6 +35,7 @@ h1,h2,h3,h4,h5,h6{
     padding-right:5.21%;
 }
 
+
 .cart__block{
     margin-top:7.9rem;
     margin-right:3rem;
@@ -46,4 +47,16 @@ h1,h2,h3,h4,h5,h6{
         padding-right:3.12%;
      }
 
+}
+
+
+@media(max-width:1010px){
+    .main{
+        flex-direction: column;
+        padding-left:6.34%;
+        padding-right:6.34%;
+    }
+ .main__block{
+     margin: 0 auto;
+ }
 }

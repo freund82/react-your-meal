@@ -10,7 +10,7 @@ function Main({categorieType, data}) {
             {mealType.length > 0 ? mealType.map((item) => (
                     <div key={item.id} className="main__card">
                         <div className="main__card--item">
-                                <img className="main__card--img" src={item.image} alt="meat" width="276px" height="220px"/>
+                                <img className="main__card--img" src={item.image} alt="meat"/>
                                 <h3 className="main__card--price">{item.price}₽</h3>
                             <p className="main__card--text">{item.name}</p>
                             <span className="main__card--weight">{item.weight} г</span>
