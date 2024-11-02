@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react"
+import { createContext } from "react"
 import Header from "./components/Header/Header"
 import Categories from "./components/Categories/Categories"
 import Main from "./components/Main/Main"
@@ -16,9 +17,11 @@ import Desserts from "./assets/icons/desserts.png"
 import Souces from "./assets/icons/souces.png"
 
 
+export const CardContext = createContext({data: [], selectedItems:[]})
 
 function App() {
   const [data, setData] = useState([])
+  const [selectedItems, setSelectedItems] = useState([])
 
   const categories = [
     { id: 1, type: "Бургеры", image: Burgers},
@@ -36,11 +39,11 @@ useEffect(() => {
   fetch("http://localhost:5173/data.json")
     .then(response => response.json())
     .then(data => setData(data))
-}, [data])
+}, [])
   
 
   return (
-    <>
+       <CardContext.Provider value={{data, selectedItems, setSelectedItems}}>
       <Header />
       <Categories categories={categories}/>
     <section className="main">
@@ -48,10 +51,10 @@ useEffect(() => {
           <Cart/>
         </div>
         <div className="main__block">
-          {categories.map((categorieType) => (<Main key={categorieType.id} categorieType={categorieType.type} data={data}/>))}
+          {categories.map((categorieType) => (<Main key={categorieType.id} categorieType={categorieType.type}/>))}
         </div>
     </section>
-    </>
+    </CardContext.Provider>
   )
 }
 

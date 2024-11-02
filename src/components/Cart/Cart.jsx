@@ -1,12 +1,16 @@
 import "./cart.css";
+import { useContext } from "react";
+import { CardContext } from "../../App";
 import Delivery from "../../assets/icons/delivery.png";
 
 function Cart() {
+    const {selectedItems} = useContext(CardContext)
+    {console.log(selectedItems)}
     return (
         <div className="cart">
             <div className="cart__header">
                 <h3 className="cart__title">Корзина</h3>
-                <span className="cart__count">4</span>
+                <span className="cart__count">{selectedItems.length}</span>
             </div>
             <div className="cart__content">
                 {/*Начало item*/}

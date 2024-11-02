@@ -1,9 +1,17 @@
 import "./main.css"
+import { useContext} from "react"
+import { CardContext } from "../../App"
 
-function Main({categorieType, data}) {
 
+
+function Main({categorieType}) {
+
+    const {data, selectedItems, setSelectedItems} = useContext(CardContext)
     let mealType=data.filter((meal) => meal.type === categorieType)
+
     
+ 
+
     return (
     <>
             <h2 className="main__title">{categorieType}</h2>
@@ -14,7 +22,7 @@ function Main({categorieType, data}) {
                                 <h3 className="main__card--price">{item.price}₽</h3>
                             <p className="main__card--text">{item.name}</p>
                             <span className="main__card--weight">{item.weight} г</span>
-                            <button type="button" className="main__card--btn">Добавить</button>
+                            <button type="button" className="main__card--btn" onClick={() => setSelectedItems([...selectedItems, item])}>Добавить</button>
                         </div>
                     </div> 
             )):(<p className="main__text">Блюд пока нет</p>)}
