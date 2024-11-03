@@ -22,7 +22,7 @@ function Main({categorieType}) {
                                 <h3 className="main__card--price">{item.price}₽</h3>
                             <p className="main__card--text">{item.name}</p>
                             <span className="main__card--weight">{item.weight} г</span>
-                            <button type="button" className="main__card--btn" onClick={() => setSelectedItems([...selectedItems, item])}>Добавить</button>
+                            <button type="button" className="main__card--btn" onClick={() => setSelectedItems([...selectedItems, item])} disabled={selectedItems.includes(item)}>Добавить</button>
                         </div>
                     </div> 
             )):(<p className="main__text">Блюд пока нет</p>)}

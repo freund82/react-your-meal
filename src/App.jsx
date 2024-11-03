@@ -6,6 +6,8 @@ import Main from "./components/Main/Main"
 import Cart from "./components/Cart/Cart"
 
 
+
+
 import Burgers from "./assets/icons/burger.png"
 import Startes from "./assets/icons/startes.png"
 import HotDogs from "./assets/icons/hotDogs.png"
@@ -22,6 +24,7 @@ export const CardContext = createContext({data: [], selectedItems:[]})
 function App() {
   const [data, setData] = useState([])
   const [selectedItems, setSelectedItems] = useState([])
+
 
   const categories = [
     { id: 1, type: "Бургеры", image: Burgers},
