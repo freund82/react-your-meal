@@ -106,6 +106,78 @@
       "image": "/images/hotdogs/classicHotdog.png",
       "price": 220,
       "weight": 215
+    },
+    {
+      "id": 13,
+      "type": "Комбо",
+      "name": "Комбо обед",
+      "description": "Сытный обед",
+      "image": "/images/combo/combo.png",
+      "price": 850,
+      "weight": 800
+    },
+    {
+      "id": 14,
+      "type": "Комбо",
+      "name": "Комбо бургер ужин",
+      "description": "Сытный бургер ужин",
+      "image": "/images/combo/comboBurgers.png",
+      "price": 750,
+      "weight": 700
+    },
+    {
+      "id": 15,
+      "type": "Шаурма",
+      "name": "Шаурма турецкая",
+      "description": "Вкусная настоящая шаурма",
+      "image": "/images/shaurma/shaurma.png",
+      "price": 250,
+      "weight": 200
+    },
+    {
+      "id": 16,
+      "type": "Шаурма",
+      "name": "Шаурма классическая",
+      "description": "Вкусная настоящая шаурма по восточному",
+      "image": "/images/shaurma/shaurmaClassic.png",
+      "price": 350,
+      "weight": 250
+    },
+    {
+      "id": 17,
+      "type": "Пицца",
+      "name": "Пица итальянская",
+      "description": "Вкусная настоящая пицца по итальянски",
+      "image": "/images/pizzas/pizza.png",
+      "price": 550,
+      "weight": 450
+    },
+    {
+      "id": 18,
+      "type": "Вок",
+      "name": "Вок по корейски",
+      "description": "Корейская лапша в соесвом соусе",
+      "image": "/images/wok/wokKorean.png",
+      "price": 180,
+      "weight": 230
+    },
+    {
+      "id": 19,
+      "type": "Десерты",
+      "name": "Пирожное венское",
+      "description": "Венское маленькое пирожное",
+      "image": "/images/desserts/cake.png",
+      "price": 780,
+      "weight": 230
+    },
+    {
+      "id": 20,
+      "type": "Соусы",
+      "name": "Три соуса",
+      "description": "Горчичный, томатный и соус барбекю",
+      "image": "/images/sauces/threeSauces.png",
+      "price": 130,
+      "weight": 330
     }
   ]
   

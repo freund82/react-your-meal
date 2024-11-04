@@ -15,20 +15,21 @@
     display: flex;
     gap:2.4rem;
     height:4rem;
+    align-items: center;
 }
 
 .categories__item{
     display:flex;
     gap:0.8rem;
-    width:12.6rem;
     background-color:var(--white-color);
     border-radius: 5rem;
     align-items: center;
-    font-size:1.5rem;
+    font-size:1.6rem;
     padding-left:1.4rem;
     padding-right: 1.4rem;
     cursor: pointer;
     white-space: nowrap; /*запрещает перенос строк*/
+    line-height: 0.5;
 }
 
 .active{

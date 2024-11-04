@@ -4,6 +4,7 @@ import Header from "./components/Header/Header"
 import Categories from "./components/Categories/Categories"
 import Main from "./components/Main/Main"
 import Cart from "./components/Cart/Cart"
+import Footer from "./components/Footer/Footer"
 
 
 
@@ -17,6 +18,7 @@ import Pizza from "./assets/icons/pizza.png"
 import Wok from "./assets/icons/wok.png"
 import Desserts from "./assets/icons/desserts.png"
 import Souces from "./assets/icons/souces.png"
+
 
 
 export const CardContext = createContext({data: [], selectedItems:[]})
@@ -57,6 +59,7 @@ useEffect(() => {
           {categories.map((categorieType) => (<Main key={categorieType.id} categorieType={categorieType.type}/>))}
         </div>
     </section>
+    <Footer/>
     </CardContext.Provider>
   )
 }

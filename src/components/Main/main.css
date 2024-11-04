@@ -74,6 +74,10 @@
          height:24.3rem;
          padding:0.4rem;
      }
+     .main__card--img{
+        width:13.7rem;
+        height:12rem;
+     }
      .main__card--price{
          font-size:1.6rem;
      }
