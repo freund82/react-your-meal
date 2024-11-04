@@ -14,7 +14,7 @@ function Main({categorieType}) {
 
     return (
     <>
-            <h2 className="main__title">{categorieType}</h2>
+            <h2 id={categorieType} className="main__title">{categorieType}</h2>
             {mealType.length > 0 ? mealType.map((item) => (
                     <div key={item.id} className="main__card">
                         <div className="main__card--item">
