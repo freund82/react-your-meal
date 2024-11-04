@@ -41,7 +41,7 @@ function App() {
   ]
 
 useEffect(() => {
-  fetch("https://maxhooktravelblog.ru/data.json")//http://localhost:5173/data.json
+  fetch("https://maxhooktravelblog.ru/react-your-meal/data.json")//http://localhost:5173/data.json
     .then(response => response.json())
     .then(data => setData(data))
 }, [])
