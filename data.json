@@ -4,7 +4,7 @@
       "type": "Бургеры",
       "name": "Вечная классика",
       "description": "Классический бургер",
-      "image": "/images/burgers/alltimeClassic.png",
+      "image": "/react-your-meal/images/burgers/alltimeClassic.png",
       "price": 450,
       "weight": 450
     },
@@ -13,7 +13,7 @@
       "type": "Бургеры",
       "name": "Тяжелый удар",
       "description": "Сытный бургер",
-      "image": "/images/burgers/heavy.png",
+      "image": "/react-your-meal/images/burgers/heavy.png",
       "price": 480,
       "weight": 470
     },
@@ -22,7 +22,7 @@
       "type": "Бургеры",
       "name": "Мясная бомба",
       "description": "Мясной бургер",
-      "image": "/images/burgers/meatBomb.png",
+      "image": "/react-your-meal/images/burgers/meatBomb.png",
       "price": 689,
       "weight": 520
     },
@@ -31,7 +31,7 @@
       "type": "Бургеры",
       "name": "Супер сырный",
       "description": "Очень сырный бургер",
-      "image": "/images/burgers/superCheese.png",
+      "image": "/react-your-meal/images/burgers/superCheese.png",
       "price": 550,
       "weight": 512
     },
@@ -40,7 +40,7 @@
       "type": "Бургеры",
       "name": "Сытный",
       "description": "Сытный бургер",
-      "image": "/images/burgers/tastyBurger.png",
+      "image": "/react-your-meal/images/burgers/tastyBurger.png",
       "price": 639,
       "weight": 580
     },
@@ -49,7 +49,7 @@
       "type": "Бургеры",
       "name": "Итальянский",
       "description": "Настоящий итальянский бургер",
-      "image": "/images/burgers/tastyBurger.png",
+      "image": "/react-your-meal/images/burgers/tastyBurger.png",
       "price": 560,
       "weight": 510
     },
@@ -58,7 +58,7 @@
       "type": "Закуски",
       "name": "Луковые кольца",
       "description": "Ароматные луковые кольца",
-      "image": "/images/startes/onion.png",
+      "image": "/react-your-meal/images/startes/onion.png",
       "price": 230,
       "weight": 160
     },
@@ -67,7 +67,7 @@
       "type": "Закуски",
       "name": "Начос",
       "description": "Начос по мексикански",
-      "image": "/images/startes/nachos.png",
+      "image": "/react-your-meal/images/startes/nachos.png",
       "price": 250,
       "weight": 220
     },
@@ -76,7 +76,7 @@
       "type": "Закуски",
       "name": "Картошка фри",
       "description": "Фкусный картофель",
-      "image": "/images/startes/free.png",
+      "image": "/react-your-meal/images/startes/free.png",
       "price": 245,
       "weight": 180
     },
@@ -85,7 +85,7 @@
       "type": "Хот-доги",
       "name": "Домашний хот-дог",
       "description": "Хот-дог по домашнему",
-      "image": "/images/hotdogs/homeHotdog.png",
+      "image": "/react-your-meal/images/hotdogs/homeHotdog.png",
       "price": 290,
       "weight": 250
     },
@@ -94,7 +94,7 @@
       "type": "Хот-доги",
       "name": "Жгучий хот-дог",
       "description": "Очень острый хот-дог",
-      "image": "/images/hotdogs/spicyHotdog.png",
+      "image": "/react-your-meal/images/hotdogs/spicyHotdog.png",
       "price": 239,
       "weight": 245
     },
@@ -103,7 +103,7 @@
       "type": "Хот-доги",
       "name": "Классический хот-дог",
       "description": "Хот-дог Классика",
-      "image": "/images/hotdogs/classicHotdog.png",
+      "image": "/react-your-meal/images/hotdogs/classicHotdog.png",
       "price": 220,
       "weight": 215
     },
@@ -112,7 +112,7 @@
       "type": "Комбо",
       "name": "Комбо обед",
       "description": "Сытный обед",
-      "image": "/images/combo/combo.png",
+      "image": "/react-your-meal/images/combo/combo.png",
       "price": 850,
       "weight": 800
     },
@@ -121,7 +121,7 @@
       "type": "Комбо",
       "name": "Комбо бургер ужин",
       "description": "Сытный бургер ужин",
-      "image": "/images/combo/comboBurgers.png",
+      "image": "/react-your-meal/images/combo/comboBurgers.png",
       "price": 750,
       "weight": 700
     },
@@ -130,7 +130,7 @@
       "type": "Шаурма",
       "name": "Шаурма турецкая",
       "description": "Вкусная настоящая шаурма",
-      "image": "/images/shaurma/shaurma.png",
+      "image": "/react-your-meal/images/shaurma/shaurma.png",
       "price": 250,
       "weight": 200
     },
@@ -139,7 +139,7 @@
       "type": "Шаурма",
       "name": "Шаурма классическая",
       "description": "Вкусная настоящая шаурма по восточному",
-      "image": "/images/shaurma/shaurmaClassic.png",
+      "image": "/react-your-meal/images/shaurma/shaurmaClassic.png",
       "price": 350,
       "weight": 250
     },
@@ -148,7 +148,7 @@
       "type": "Пицца",
       "name": "Пица итальянская",
       "description": "Вкусная настоящая пицца по итальянски",
-      "image": "/images/pizzas/pizza.png",
+      "image": "/react-your-meal/images/pizzas/pizza.png",
       "price": 550,
       "weight": 450
     },
@@ -157,7 +157,7 @@
       "type": "Вок",
       "name": "Вок по корейски",
       "description": "Корейская лапша в соесвом соусе",
-      "image": "/images/wok/wokKorean.png",
+      "image": "/react-your-meal/images/wok/wokKorean.png",
       "price": 180,
       "weight": 230
     },
@@ -166,7 +166,7 @@
       "type": "Десерты",
       "name": "Пирожное венское",
       "description": "Венское маленькое пирожное",
-      "image": "/images/desserts/cake.png",
+      "image": "/react-your-meal/images/desserts/cake.png",
       "price": 780,
       "weight": 230
     },
@@ -175,7 +175,7 @@
       "type": "Соусы",
       "name": "Три соуса",
       "description": "Горчичный, томатный и соус барбекю",
-      "image": "/images/sauces/threeSauces.png",
+      "image": "/react-your-meal/images/sauces/threeSauces.png",
       "price": 130,
       "weight": 330
     }
