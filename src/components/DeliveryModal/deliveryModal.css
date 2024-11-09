@@ -12,9 +12,7 @@
     z-index:1000;
 
 }
-.closed {
-    display: none;
-  }
+
 
 .deliveryModal__closeBtn{
     width:2.4rem;

@@ -1,19 +1,13 @@
 import "./deliveryModal.css";
-import {useContext, useState} from "react";
-import { CardContext } from "../../App";
+import {useState} from "react";
 import Cake from "../../assets/icons/cake.png";
 import Close from "../../assets/icons/close.png";
 
 
-function DeliveryModal() {
+function DeliveryModal({closeModal}) {
 
 const [selectedValue, setSelectedValue] = useState("Delivery");
 
-const {closeModal, setCloseModal} = useContext(CardContext);
-
-const handleCloseModal = () => {
-        setCloseModal(true);
-    };
 
    
 const handleRadioChange=(e)=>{
@@ -21,8 +15,8 @@ const handleRadioChange=(e)=>{
 }
 
     return (
-        <div  className={`deliveryModal ${closeModal ? "closed" : ""}`}>
-            <img className="deliveryModal__closeBtn" src={Close} alt="" onClick={handleCloseModal}/>
+        <div  className="deliveryModal">
+            <img className="deliveryModal__closeBtn" src={Close} alt="" onClick={closeModal}/>
             <div className="deliveryModal__item">
                 <img src={Cake} alt=""/>
             </div>

@@ -8,7 +8,7 @@ import DeliveryModal from "../DeliveryModal/DeliveryModal";
 
 
 function Cart() {
-    const {selectedItems, setCloseModal} = useContext(CardContext)
+    const {selectedItems} = useContext(CardContext)
 
     const [showModal, setShowModal] = useState(false);
 
@@ -20,8 +20,11 @@ function Cart() {
 
     const handleShowModal = () => {
         setShowModal(true);
-        setCloseModal(false);
       };
+
+      const handleCloseModal = () => {
+        setShowModal(false);
+    };
 
     return (
         <div className="cart">
@@ -42,7 +45,7 @@ function Cart() {
                 <div>
                     <button type="button" className="cart__button" onClick={handleShowModal}>Оформить заказ</button>
                 </div>
-                {showModal ? <DeliveryModal /> : null}
+                {showModal && <DeliveryModal closeModal={handleCloseModal} />}
                 <div className="cart__delivery">
                 <img src={Delivery} alt="delivery" />
                 <p>Бесплатная доставка</p>
