@@ -3,16 +3,26 @@ import { useContext, useState } from "react";
 import { CardContext } from "../../App";
 import Delivery from "../../assets/icons/delivery.png";
 import CartItem from "../CartItem/CartItem";
+import DeliveryModal from "../DeliveryModal/DeliveryModal";
+
 
 
 function Cart() {
-    const {selectedItems} = useContext(CardContext)
+    const {selectedItems, setCloseModal} = useContext(CardContext)
+
+    const [showModal, setShowModal] = useState(false);
 
     const [total, setTotal] = useState(0);
 
     const handleTotalChange = (total) => {
         setTotal(total);
       };
+
+    const handleShowModal = () => {
+        setShowModal(true);
+        setCloseModal(false);
+      };
+
     return (
         <div className="cart">
             <div className="cart__header">
@@ -30,8 +40,9 @@ function Cart() {
                     </div>
                 </div>
                 <div>
-                    <button type="button" className="cart__button">Оформить заказ</button>
+                    <button type="button" className="cart__button" onClick={handleShowModal}>Оформить заказ</button>
                 </div>
+                {showModal ? <DeliveryModal /> : null}
                 <div className="cart__delivery">
                 <img src={Delivery} alt="delivery" />
                 <p>Бесплатная доставка</p>

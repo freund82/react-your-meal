@@ -57,6 +57,9 @@
     background-color: var(--dark-gray-color);
 }
 
+
+
+
 @media(max-width:1100px){
      .main__card{
         margin-right:0.8rem;

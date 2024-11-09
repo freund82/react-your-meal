@@ -21,11 +21,12 @@ import Souces from "./assets/icons/souces.png"
 
 
 
-export const CardContext = createContext({data: [], selectedItems:[]})
+export const CardContext = createContext({data: [], selectedItems:[], closeModal: false,})
 
 function App() {
   const [data, setData] = useState([])
   const [selectedItems, setSelectedItems] = useState([])
+  const [closeModal, setCloseModal] = useState(false);
 
 
   const categories = [
@@ -48,7 +49,7 @@ useEffect(() => {
   
 
   return (
-       <CardContext.Provider value={{data, selectedItems, setSelectedItems}}>
+       <CardContext.Provider value={{data, selectedItems, setSelectedItems, closeModal, setCloseModal}}>
       <Header />
       <Categories categories={categories}/>
     <section className="main">
