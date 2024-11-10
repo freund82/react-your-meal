@@ -26,6 +26,7 @@ export const CardContext = createContext({data: [], selectedItems:[]})
 function App() {
   const [data, setData] = useState([])
   const [selectedItems, setSelectedItems] = useState([])
+  
 
 
 

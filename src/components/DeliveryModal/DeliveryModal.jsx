@@ -1,10 +1,14 @@
 import "./deliveryModal.css";
-import {useState} from "react";
+import { useState, useContext } from "react";
+import { ItemsContext } from "../Cart/Cart";
 import Cake from "../../assets/icons/cake.png";
 import Close from "../../assets/icons/close.png";
 
 
-function DeliveryModal({closeModal}) {
+
+function DeliveryModal({closeModal, selectedItems}) {
+  
+const {itemCounts} = useContext(ItemsContext);
 
 const [name, setName] = useState("");
 const [phone, setPhone] = useState("");
@@ -41,19 +45,33 @@ const handleHousePhoneChange=(e)=>{
     setHousePhone(e.target.value)
 }
 
+const collectCartData = () => {
+    const cartItems = selectedItems.map((item) => ({
+      id: item.id,
+      name: item.name,
+      price: item.price,
+      quantity: itemCounts[item.id] || 1,
+    }));
+    const totalSum = cartItems.reduce((acc, item) => acc + item.price * item.quantity, 0);
+    return { cartItems, totalSum };
+  };
+  
+
  const handleSubmitData=(e)=>{
     e.preventDefault()
    const formData={
     name,
     phone,
-    delivetyType: selectedValue,
+    deliveryType: selectedValue,
     address,
     floor,
     housePhone
    }
+   const cartData = collectCartData();
+   const dataToSend = { ...formData, ...cartData };
    fetch('php/data.php',{
     method: "POST",
-    body: JSON.stringify(formData),
+    body: JSON.stringify(dataToSend),
     headers: {
         "Content-type": "application/json; charset=UTF-8"
     }

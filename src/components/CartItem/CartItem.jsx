@@ -1,13 +1,14 @@
 import "./cartItem.css";
-import {useContext, useState, useEffect} from "react";
-import { CardContext } from "../../App";
+import {useContext, useEffect} from "react";
+import {CardContext} from "../../App";
+import {ItemsContext} from "../Cart/Cart";
 
 
 function CartItem({onTotalChange}){
 
     const {selectedItems} = useContext(CardContext);
     
-    const [itemCounts, setItemCounts] = useState({});
+    const {itemCounts, setItemCounts} = useContext(ItemsContext);
 
     const handleCountChange = (itemId, increment) => {
         setItemCounts((prevCounts) => {
