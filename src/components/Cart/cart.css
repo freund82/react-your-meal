@@ -18,6 +18,9 @@
     font-size:2.4rem;
     font-weight: 600;
 }
+.cart__empty{
+     font-size:1.6rem;
+}
 
 .cart__count{
     width:4.1rem;
@@ -102,4 +105,10 @@
     align-items: center;
     font-size:1.2rem;
     font-weight: 400;
+}
+
+@media(max-width:700px){
+     .cart__empty{
+           display:none;
+     }
 }

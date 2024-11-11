@@ -1,16 +1,15 @@
 .deliveryModal{
     position: absolute;
-    top:15%;
-    left:50%;
-    transform: translateX(-50%);
+    top:-11%;
+    transform: translate(50%);
+    margin:0 auto;
     width: 68.4rem;
     height: 43.2rem;
     display:flex;
     justify-content: space-between;
     background-color:var(--white-color);
     border-radius: 2.4rem;
-    z-index:1000;
-
+    z-index:1001;
 }
 
 
@@ -92,22 +91,34 @@
     background-color: var(--orange-color);
 }
 
+@media(max-width:1000px){
+    .deliveryModal{
+        top:50%;
+        left:50%;
+        transform:translate(-50%,-50%);
+        z-index: 1000;
+    }
+}
+
 @media(max-width:700px){
+    .deliveryModal{
+        position:fixed;
+        bottom:0;
+        width: 100%;
+        height:100vh;
+        border-radius: 0;
+    }
+
     .deliveryModal__item{
         display: none;
     }
-    .deliveryModal{
-         width: 100%;
-    
-    }
+ 
+ 
     .deliveryModal__form{
         width:100%;
+        height: 100vh;
         border-radius: 0;
         padding:1rem;
     }
-    .deliveryModal{
-        top:0;
-        height:100%;
-        border-radius: 0;
-    }
+ 
 }

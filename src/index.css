@@ -77,8 +77,12 @@ a{
 }
 
 @media(max-width:700px){
+    .categories{
+        margin-bottom:2rem;
+    }
     .cart__block{
       margin:0 auto;
+      margin-top:2rem;
       box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.16); 
     }
 }

@@ -55,7 +55,7 @@ function Cart() {
                 <img src={Delivery} alt="delivery" />
                 <p>Бесплатная доставка</p>
                 </div>
-            </div>:<span style={{fontSize:"1.6rem"}}>Тут пока пусто :(</span>}
+            </div>:<span className="cart__empty">Тут пока пусто :(</span>}
         </div>
         </ItemsContext.Provider>
     );
