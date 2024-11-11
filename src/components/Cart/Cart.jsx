@@ -9,20 +9,21 @@ export const ItemsContext = createContext({});
 
 function Cart() {
 
-    const [itemCounts, setItemCounts] = useState({});
+    const [itemCounts, setItemCounts] = useState({}); //счетчик товара в корзине
 
-    const {selectedItems} = useContext(CardContext)
+    const {selectedItems} = useContext(CardContext) //выбранные товары
 
     const [showModal, setShowModal] = useState(false);
 
     const [total, setTotal] = useState(0);
 
-    const handleTotalChange = (total) => {
+    const handleTotalChange = (total) => { //считаем общую сумму
         setTotal(total);
       };
 
     const handleShowModal = () => {
         setShowModal(true);
+        window.scrollTo(0, 0); //переход в начало страницы
       };
 
       const handleCloseModal = () => {
