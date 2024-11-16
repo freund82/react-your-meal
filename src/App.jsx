@@ -1,10 +1,13 @@
 import { useState, useEffect } from "react"
 import { createContext } from "react"
+import {Routes, Route} from "react-router-dom"
+
 import Header from "./components/Header/Header"
 import Categories from "./components/Categories/Categories"
 import Main from "./components/Main/Main"
 import Cart from "./components/Cart/Cart"
 import Footer from "./components/Footer/Footer"
+import DescriptionModal from "./components/DescriptionModal/DescriptionModal"
 
 
 
@@ -50,19 +53,24 @@ useEffect(() => {
   
 
   return (
-       <CardContext.Provider value={{data, selectedItems, setSelectedItems}}>
-      <Header />
-      <Categories categories={categories}/>
-    <section className="main">
-        <div className="cart__block">
-          <Cart/>
-        </div>
-        <div className="main__block">
-          {categories.map((categorieType) => (<Main key={categorieType.id} categorieType={categorieType.type}/>))}
-        </div>
-    </section>
-    <Footer/>
-    </CardContext.Provider>
+    <Routes>
+      <Route path="/react-your-meal" element={
+        <CardContext.Provider value={{data, selectedItems, setSelectedItems}}>
+        <Header />
+        <Categories categories={categories}/>
+      <section className="main">
+          <div className="cart__block">
+            <Cart/>
+          </div>
+          <div className="main__block">
+            {categories.map((categorieType) => (<Main key={categorieType.id} categorieType={categorieType.type}/>))}
+          </div>
+      </section>
+      <Footer/>
+      </CardContext.Provider>
+      }/>
+      <Route path="/react-your-meal/descriptionModal" element={<DescriptionModal/>}/>
+    </Routes>
   )
 }
 
