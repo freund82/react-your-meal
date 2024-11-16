@@ -48,12 +48,10 @@ a{
 
 
 .cart__block{
-    position:sticky;
     top:8%;
     margin-top:7.9rem;
     margin-right:3rem;
     border-radius: 1.4rem;
-    z-index:100;
 }
 
 @media(max-width:1100px){

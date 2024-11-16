@@ -1,18 +1,18 @@
 .categories{
     position:sticky;
-     top:0;
+    top:0;
     max-width:123.1rem;
-    height:4rem;
+    height:5rem;
+    padding-top:0.5rem;
+    padding-bottom: 0.5rem;
     margin-left:5.21%;
     overflow-x:auto;
     scrollbar-width: none; /* для Firefox */
     -ms-overflow-style: none; /* для IE и Edge */
     -webkit-scrollbar {
         display: none; /* для WebKit */
-    }
+    };
     margin-bottom:5rem;
-    background-color: var(--gray-color);
-    z-index:100;
 }
 
 .categories__inner{
