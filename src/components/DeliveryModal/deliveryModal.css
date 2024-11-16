@@ -1,6 +1,6 @@
 .deliveryModal{
     position: absolute;
-    top:-11%;
+    top:50%;
     transform: translate(50%);
     margin:0 auto;
     width: 68.4rem;
