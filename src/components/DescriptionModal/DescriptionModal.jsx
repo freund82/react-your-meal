@@ -15,9 +15,9 @@ function DescriptionModal({closeModal, item, handleSelectedItems}){
                 <div style={{textAlign:"right"}}>
                 <img className="descriptionModal__closeBtn" src={Close} alt="" onClick={closeModal} width="30px" height="30px" />
                 </div>
-                <h2 style={{fontSize:"4rem", marginBottom:"2.4rem", marginTop:"-2rem"}}>{item.name}</h2>
+                <h2 className="descriptionModal__title">{item.name}</h2>
                 <div className="descriptionModal__content">
-                    <div style={{display:"flex", gap:"2.4rem"}}>
+                    <div className="descriptionModal__contentBlock">
                     <div>
                         <img src={item.image} alt="" />
                     </div>
@@ -33,7 +33,7 @@ function DescriptionModal({closeModal, item, handleSelectedItems}){
                             </div>
                         </div>
                     </div>
-                    <div style={{display:"flex", justifyContent:"space-between", alignItems:"center"}}>
+                    <div className="descriptionModal__buttonBlock" style={{display:"flex", justifyContent:"space-between", alignItems:"center"}}>
                         <div>
                         <button className="cart__button descriptionButton" onClick={()=>handleSelectedItems(item)}>Добавить</button>
                         </div>

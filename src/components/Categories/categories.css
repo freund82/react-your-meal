@@ -13,8 +13,12 @@
         display: none; /* для WebKit */
     };
     margin-bottom:5rem;
-
+    z-index:500;
 }
+
+.categories.change-position {
+    position: static;
+  }
 
 .categories__inner{
     display: flex;

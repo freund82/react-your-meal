@@ -2,7 +2,7 @@ import "./Categories.css"
 import {useState} from "react"
 import {HashLink} from "react-router-hash-link"
 
-function Categories({categories}) {
+function Categories({categories, showDescriptionModal}) {
    
     const [activeCategory, setActiveCategory] = useState(0)
 
@@ -11,7 +11,7 @@ function Categories({categories}) {
     }
 
     return (
-        <div className="categories">
+        <div className={`categories ${showDescriptionModal ? 'change-position' : ''}`}>
             <div className="categories__inner">
                   {categories.map((item, index) => (
                     <HashLink key={index} to={`#${item.type}`} smooth>

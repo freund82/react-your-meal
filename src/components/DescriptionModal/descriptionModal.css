@@ -22,21 +22,51 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
+.descriptionModal__title{
+    font-size:4rem;
+    margin-bottom:2.4rem;
+    margin-top:-2rem;
+}
+
 .descriptionModal__content{
     display:flex;
     flex-direction: column;
     gap:1.6rem;
     font-size:1.6rem;
 }
+.descriptionModal__contentBlock{
+    display:flex;
+    gap:2.4rem;
+}
 
+.descriptionModal__buttonBlock{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
 .cart__button.descriptionButton{
     width:27.6rem;
 }
 
 @media(max-width:768px){
+
     .descriptionModal__inner{
         width:100%;
         height: 100%;
+        padding:1rem;
         border-radius: 0;
     }
+    .descriptionModal__title{
+        font-size:3rem;
+        margin-bottom:1.2rem;
+    }
+
+    .descriptionModal__contentBlock{
+       flex-direction: column;
+    }
+    .descriptionModal__buttonBlock{
+      flex-direction: column-reverse;
+      gap:2rem;
+    }
+   
 }
