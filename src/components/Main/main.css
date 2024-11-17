@@ -1,12 +1,17 @@
 
-
+.mainSection{
+    position: relative;
+    z-index:100;
+}
 .main__card{
+    position:relative;
     width:100%;
     display:inline-flex;
     width:30rem;
     height:41.1rem;
     margin-right:1.9rem;
     margin-bottom:3rem;
+    z-index:100;
 }
 .main__title{
     font-size:4rem;

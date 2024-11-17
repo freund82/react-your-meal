@@ -1,13 +1,13 @@
 import { useState, useEffect } from "react"
 import { createContext } from "react"
-import {Routes, Route} from "react-router-dom"
+
 
 import Header from "./components/Header/Header"
 import Categories from "./components/Categories/Categories"
 import Main from "./components/Main/Main"
 import Cart from "./components/Cart/Cart"
 import Footer from "./components/Footer/Footer"
-import DescriptionModal from "./components/DescriptionModal/DescriptionModal"
+
 
 
 
@@ -29,8 +29,11 @@ export const CardContext = createContext({data: [], selectedItems:[]})
 function App() {
   const [data, setData] = useState([])
   const [selectedItems, setSelectedItems] = useState([])
-  
+  const [showDescriptionModal, setShowDescriptionModal] = useState(null);
+  const [count, setCount] = useState(1);
 
+    const handleShowDescriptionModal = (itemId) => { setShowDescriptionModal(itemId); };
+     const handleCloseDescriptionModal = () => { setShowDescriptionModal(null); };
 
 
   const categories = [
@@ -53,9 +56,7 @@ useEffect(() => {
   
 
   return (
-    <Routes>
-      <Route path="/react-your-meal" element={
-        <CardContext.Provider value={{data, selectedItems, setSelectedItems}}>
+    <CardContext.Provider value={{data, selectedItems, setSelectedItems}}>
         <Header />
         <Categories categories={categories}/>
       <section className="main">
@@ -63,14 +64,11 @@ useEffect(() => {
             <Cart/>
           </div>
           <div className="main__block">
-            {categories.map((categorieType) => (<Main key={categorieType.id} categorieType={categorieType.type}/>))}
+            {categories.map((categorieType) => (<Main key={categorieType.id} categorieType={categorieType.type} showDescriptionModal={showDescriptionModal} handleShowDescriptionModal={handleShowDescriptionModal} handleCloseDescriptionModal={handleCloseDescriptionModal}/>))}
           </div>
       </section>
       <Footer/>
       </CardContext.Provider>
-      }/>
-      <Route path="/react-your-meal/descriptionModal" element={<DescriptionModal/>}/>
-    </Routes>
   )
 }
 

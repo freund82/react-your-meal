@@ -10,6 +10,7 @@ function CartItem({onTotalChange}){
     
     const {itemCounts, setItemCounts} = useContext(ItemsContext);
 
+
     const handleCountChange = (itemId, increment) => {
         setItemCounts((prevCounts) => {
           const newCounts = { ...prevCounts };
