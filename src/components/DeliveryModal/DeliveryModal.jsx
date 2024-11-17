@@ -84,6 +84,7 @@ const collectCartData = () => {
     
     return (
         <div  className="deliveryModal">
+            <div className="deliveryModal__inner">
             <img className="deliveryModal__closeBtn" src={Close} alt="" onClick={closeModal}/>
             <div className="deliveryModal__item">
                 <img src={Cake} alt=""/>
@@ -114,6 +115,7 @@ const collectCartData = () => {
                     <button className="deliveryModal__btn" type="submit" onClick={handleSubmitData}>Оформить</button>
                 
             </form>
+            </div>
         </div>
     )
 
