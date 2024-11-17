@@ -19,7 +19,7 @@ function DescriptionModal({closeModal, item, handleSelectedItems}){
                 <div className="descriptionModal__content">
                     <div className="descriptionModal__contentBlock">
                     <div>
-                        <img src={item.image} alt="" />
+                        <img src={item.image} alt="" width="276px" height="220px" style={{borderRadius:"2.5rem"}} />
                     </div>
                         <div style={{display:"flex", flexDirection:"column", justifyContent:"space-between"}}>
                             <p style={{margin:0}}>{item.description}</p>

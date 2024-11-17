@@ -75,6 +75,11 @@ a{
 }
 
 @media(max-width:700px){
+   
+    .main{
+        padding-left:1rem;
+        padding-right:1rem;
+    }
     .categories{
         margin-bottom:2rem;
     }

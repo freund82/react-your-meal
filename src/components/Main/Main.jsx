@@ -23,7 +23,7 @@ function Main({categorieType, showDescriptionModal, handleShowDescriptionModal, 
             {mealType.length > 0 ? mealType.map((item) => (
                     <div key={item.id} className="main__card">
                         <div className="main__card--item">
-                        <img className="main__card--img" src={item.image} alt="meat" width="276px" height="220px" style={{borderRadius:"2.5rem"}} onClick={()=>handleShowDescriptionModal(item.id)}/>
+                        <img className="main__card--img" src={item.image} alt="meat" width="276px" height="220px" onClick={()=>handleShowDescriptionModal(item.id)}/>
                         {showDescriptionModal === item.id && <DescriptionModal  item={item} closeModal={handleCloseDescriptionModal} handleSelectedItems={handleSelectedItems}/>}
                                 <h3 className="main__card--price">{item.price}₽</h3>
                             <p className="main__card--text">{item.name}</p>
