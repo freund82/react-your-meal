@@ -1,10 +1,16 @@
 import "./descriptionModal.css";
+import {useState } from "react";
 import Close from "../../assets/icons/close.png";
 
 
 
 function DescriptionModal({closeModal, item, handleSelectedItems}){
 
+   const [isButtonDisabled, setIsButtonDisabled] = useState(false);
+   const handleButtonClick = () => {
+    handleSelectedItems(item);
+    setIsButtonDisabled(true);
+   }
 
     
 
@@ -35,7 +41,7 @@ function DescriptionModal({closeModal, item, handleSelectedItems}){
                     </div>
                     <div className="descriptionModal__buttonBlock" style={{display:"flex", justifyContent:"space-between", alignItems:"center"}}>
                         <div>
-                        <button className="cart__button descriptionButton" onClick={()=>handleSelectedItems(item)}>Добавить</button>
+                        <button className="cart__button descriptionButton" onClick={handleButtonClick} disabled={isButtonDisabled}>Добавить</button>
                         </div>
                         <div>
                             <span>{item.price} руб.</span>

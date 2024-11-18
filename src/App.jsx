@@ -58,7 +58,7 @@ useEffect(() => {
   return (
     <CardContext.Provider value={{data, selectedItems, setSelectedItems}}>
         <Header />
-        <Categories categories={categories} showDescriptionModal={showDescriptionModal}/>
+        <Categories categories={categories}/>
       <section className="main">
           <div className="cart__block">
             <Cart/>
