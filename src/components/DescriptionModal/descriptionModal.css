@@ -48,6 +48,17 @@
     width:27.6rem;
 }
 
+button[disabled] {
+    background-color: #ccc;
+    color: #999;
+    cursor: not-allowed;
+  }
+
+  button[disabled]:hover {
+   background-color: #ccc;
+   color: #999
+}
+
 @media(max-width:768px){
 
     .descriptionModal__inner{

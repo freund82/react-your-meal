@@ -93,14 +93,14 @@ const collectCartData = () => {
                <label className="deliveryModal__label" >Доставка</label>
                     <input className="deliveryModal__input" type="text" value={name} onChange={handleNameChange} placeholder="Ваше имя" required/>
                     <input className="deliveryModal__input" type="phone" value={phone} onChange={handlePhoneChange} placeholder="Телефон" required/>
-                <div>
-                    <input type="radio" name="group1" value="Yourself" checked={selectedValue === "Yourself"} onChange={handleRadioChange}/>
-                    <label htmlFor="Yourself">Самовывоз</label>
-                </div>
-                <div>
-                    <input type="radio" name="group1" value="Delivery" checked={selectedValue === "Delivery"} onChange={handleRadioChange}/>
-                    <label htmlFor="Delivery">Доставка</label>
-                </div>
+                     <div>
+                        <input id="Yourself" type="radio" name="group1" value="Yourself" checked={selectedValue === "Yourself"} onChange={handleRadioChange}/>
+                        <label for="Yourself" style={{display:"inline-block", alignItems:"center"}}>Самовывоз</label>
+                     </div>
+                    <div>
+                        <input id="Delivery" type="radio" name="group1" value="Delivery" checked={selectedValue === "Delivery"} onChange={handleRadioChange}/>
+                        <label for="Delivery" style={{display:"inline-block"}}>Доставка</label>
+                    </div> 
                 {
                     selectedValue === "Delivery" &&
                     <div className="deliveryModal__adress">

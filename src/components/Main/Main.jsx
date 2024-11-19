@@ -14,7 +14,10 @@ function Main({categorieType, showDescriptionModal, handleShowDescriptionModal, 
     let mealType=data.filter((meal) => meal.type === categorieType)
 
  const handleSelectedItems=(item)=>{
-    setSelectedItems([...selectedItems, item])
+    const isItemAlreadySelected = selectedItems.some(selectedItem => selectedItem.id === item.id);
+    if (!isItemAlreadySelected) {
+      setSelectedItems([...selectedItems, item]);
+    }
  }
 
     return (
