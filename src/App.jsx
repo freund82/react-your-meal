@@ -30,7 +30,7 @@ function App() {
   const [data, setData] = useState([])
   const [selectedItems, setSelectedItems] = useState([])
   const [showDescriptionModal, setShowDescriptionModal] = useState(null);
-  const [count, setCount] = useState(1);
+
 
     const handleShowDescriptionModal = (itemId) => { setShowDescriptionModal(itemId); };
      const handleCloseDescriptionModal = () => { setShowDescriptionModal(null); };
@@ -58,13 +58,13 @@ useEffect(() => {
   return (
     <CardContext.Provider value={{data, selectedItems, setSelectedItems}}>
         <Header />
-        <Categories categories={categories}/>
+        <Categories categories={categories} showDescriptionModal={showDescriptionModal}/>
       <section className="main">
           <div className="cart__block">
             <Cart/>
           </div>
           <div className="main__block">
-            {categories.map((categorieType) => (<Main key={categorieType.id} categorieType={categorieType.type} showDescriptionModal={showDescriptionModal} handleShowDescriptionModal={handleShowDescriptionModal} handleCloseDescriptionModal={handleCloseDescriptionModal}/>))}
+            {categories.map((categorieType) => (<Main key={categorieType.id} categorieType={categorieType.type} showDescriptionModal={showDescriptionModal}  handleShowDescriptionModal={handleShowDescriptionModal} handleCloseDescriptionModal={handleCloseDescriptionModal}/>))}
           </div>
       </section>
       <Footer/>

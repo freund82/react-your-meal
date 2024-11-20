@@ -119,4 +119,7 @@
          padding-left:0.5%;
 
     }
+    .main__card--item{
+        padding-bottom: 0.4rem;
+    }
 }

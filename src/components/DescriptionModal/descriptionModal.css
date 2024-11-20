@@ -63,21 +63,24 @@ button[disabled] {
 
     .descriptionModal__inner{
         width:100%;
-        height: 100vh;
+        height: calc(100vh - 5rem);
         padding:1rem;
         border-radius: 0;
     }
     .descriptionModal__title{
         font-size:3rem;
         margin-bottom:1.2rem;
+        text-align: center;
     }
 
     .descriptionModal__contentBlock{
        flex-direction: column;
+       align-items: center;
+       font-size:1.2rem;
     }
     .descriptionModal__buttonBlock{
       flex-direction: column-reverse;
-      gap:2rem;
+      gap:1rem;
     }
    
 }
