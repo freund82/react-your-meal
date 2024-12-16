@@ -95,11 +95,11 @@ const collectCartData = () => {
                     <input className="deliveryModal__input" type="phone" value={phone} onChange={handlePhoneChange} placeholder="Телефон" required/>
                      <div>
                         <input id="Yourself" type="radio" name="group1" value="Yourself" checked={selectedValue === "Yourself"} onChange={handleRadioChange}/>
-                        <label for="Yourself" style={{display:"inline-block", alignItems:"center"}}>Самовывоз</label>
+                        <label htmlFor="Yourself" style={{display:"inline-block", alignItems:"center"}}>Самовывоз</label>
                      </div>
                     <div>
                         <input id="Delivery" type="radio" name="group1" value="Delivery" checked={selectedValue === "Delivery"} onChange={handleRadioChange}/>
-                        <label for="Delivery" style={{display:"inline-block"}}>Доставка</label>
+                        <label htmlFor="Delivery" style={{display:"inline-block"}}>Доставка</label>
                     </div> 
                 {
                     selectedValue === "Delivery" &&
