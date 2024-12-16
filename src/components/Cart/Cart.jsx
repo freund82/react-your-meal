@@ -8,56 +8,44 @@ import DeliveryModal from "../DeliveryModal/DeliveryModal";
 export const ItemsContext = createContext({});
 
 function Cart() {
+    const { selectedItems, setSelectedItems } = useContext(CardContext);
 
-    const [itemCounts, setItemCounts] = useState({}); //счетчик товара в корзине
-
-    const {selectedItems} = useContext(CardContext) //выбранные товары
-
-    const [showModal, setShowModal] = useState(false);
-
-    const [total, setTotal] = useState(0);
-
-    const handleTotalChange = (total) => { //считаем общую сумму
-        setTotal(total);
-      };
-
-    const handleShowModal = () => {
-        setShowModal(true);
-        window.scrollTo(0, 0); //переход в начало страницы
-      };
-
-      const handleCloseModal = () => {
-        setShowModal(false);
+    const updateItemCount = (itemId, newCount) => {
+      if (newCount < 1) {
+        // Удаляем товар если количество меньше 1
+        setSelectedItems(selectedItems.filter(item => item.id !== itemId));
+      } else {
+        setSelectedItems(
+          selectedItems.map(item =>
+            item.id === itemId ? { ...item, count: newCount } : item
+          )
+        );
+      }
     };
-
+  
     return (
-        <ItemsContext.Provider value={{itemCounts, setItemCounts}}>
-        <div className="cart">
-            <div className="cart__header">
-                <h3 className="cart__title">Корзина</h3>
-                <span className="cart__count">{selectedItems.length}</span>
+      <div className="cart">
+        {selectedItems.map(item => (
+          <div key={item.id} className="cart-item">
+            <img src={item.image} alt={item.name} />
+            <h3>{item.name}</h3>
+            <div className="counter">
+              <button onClick={() => updateItemCount(item.id, item.count - 1)}>
+                -
+              </button>
+              <span>{item.count}</span>
+              <button onClick={() => updateItemCount(item.id, item.count + 1)}>
+                +
+              </button>
             </div>
-           {(selectedItems.length) ?  <div className="cart__content">
-                <CartItem onTotalChange={handleTotalChange}/>
-                <div className="cart__total">
-                    <div>
-                        <p>Итого</p>
-                    </div>
-                    <div>
-                        <p>{total}₽</p>
-                    </div>
-                </div>
-                <div>
-                    <button type="button" className="cart__button" onClick={handleShowModal}>Оформить заказ</button>
-                </div>
-                {showModal && <DeliveryModal closeModal={handleCloseModal} selectedItems={selectedItems} />}
-                <div className="cart__delivery">
-                <img src={Delivery} alt="delivery" />
-                <p>Бесплатная доставка</p>
-                </div>
-            </div>:<span className="cart__empty">Тут пока пусто :(</span>}
+            <p>Цена: {item.price * item.count}₽</p>
+          </div>
+        ))}
+        <div className="cart-total">
+          Итого: {selectedItems.reduce((sum, item) => sum + item.price * item.count, 0)}₽
         </div>
-        </ItemsContext.Provider>
+      </div>
+  
     );
 }
 

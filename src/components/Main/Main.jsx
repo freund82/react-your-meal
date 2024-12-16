@@ -16,7 +16,7 @@ function Main({categorieType, showDescriptionModal, handleShowDescriptionModal, 
  const handleSelectedItems=(item)=>{
     const isItemAlreadySelected = selectedItems.some(selectedItem => selectedItem.id === item.id);
     if (!isItemAlreadySelected) {
-      setSelectedItems([...selectedItems, item]);
+      setSelectedItems([...selectedItems, {...item, count: 1}]);
     }
  }
 
